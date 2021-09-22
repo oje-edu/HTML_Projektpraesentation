@@ -1,0 +1,222 @@
+:root {
+  --bg-clr: #cedbec;
+  --title-clr: #195f9e;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 16px;
+
+  background-color: var(--bg-clr);
+
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+h1 {
+  text-decoration: underline;
+  font-size: 3em;
+
+  margin-bottom: 1em;
+}
+
+.wrapper {
+  min-height: 100vh;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+
+  background-image: url("/assets/img/bg.png");
+  background-repeat: no-repeat;
+  object-fit: fill;
+}
+
+.sec1,
+.sec2,
+.sec3,
+.sec4,
+.sec5,
+.sec6 {
+  width: 100%;
+}
+
+.sec1_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  color: var(--title-clr);
+}
+.sec1_top_title {
+  position: relative;
+  width: 90vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sec1_top_title h1 {
+  text-decoration: underline;
+  font-size: 3em;
+
+  margin-bottom: 1em;
+}
+.sec1_top_title h5 {
+  font-size: 1.2em;
+}
+
+.sec1_top_title p {
+  margin-top: 0.25em;
+}
+
+.sec1_bottom_title {
+  position: absolute;
+  width: 250px;
+
+  right: 10%;
+  bottom: 5%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--title-clr);
+  color: var(--bg-clr);
+
+  border: none;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.sec2_list {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sec2 ul {
+  list-style-type: "→ ";
+  font-size: 1.6em;
+}
+
+li {
+  color: var(--title-clr);
+}
+
+.flex_logo {
+  position: relative;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+
+  justify-content: right;
+
+  mix-blend-mode: multiply;
+}
+
+.logo {
+  position: absolute;
+  width: 180px;
+  height: 35px;
+
+  right: 5%;
+  background-image: url(/assets/img/jiku-logo.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  object-fit: fill;
+
+  margin-top: 1em;
+
+  border: none;
+  border-radius: 0.5em;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  height: 90%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.top_title {
+  height: 200px;
+  width: 80%;
+
+  color: var(--title-clr);
+
+  padding-left: 3em;
+}
+
+.top_title h1 {
+  text-decoration: underline;
+}
+
+.bottom_title {
+  width: 80%;
+  height: 50%;
+
+  /* margin-right: -80%;
+  margin-bottom: -10%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: right;
+}
+
+/* Firefox */
+* {
+  scrollbar-color: var(--title-clr) var(--bg-clr);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-clr) !important;
+  border-radius: 100vh;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  border-radius: 100vh;
+  background-image: linear-gradient(180deg, var(--bg-clr), var(--title-clr));
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 0;
+  /* height 0:  hide the horizontal scrollbar */
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--title-clr);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--title-clr) !important;
+}
